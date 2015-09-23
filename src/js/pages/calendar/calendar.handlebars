@@ -1,29 +1,37 @@
-<h1>Calendar</h1>
+<h1 class="text-center">
+  <a href='#' class="previous-month">
+    <i class="small glyphicon glyphicon-chevron-left"></i>
+  </a>
+  {{title}}
+  <a href='#' class="next-month">
+    <i class="small glyphicon glyphicon-chevron-right"></i>
+  </a>
+</h1>
 <table class="calendar">
   <tr>
-    <th>Sunday</th>
-    <th>Monday</th>
-    <th>Tuesday</th>
-    <th>Wednesday</th>
-    <th>Thursday</th>
-    <th>Friday</th>
-    <th>Saturday</th>
+    <th>Su</th>
+    <th>Mo</th>
+    <th>Tu</th>
+    <th>We</th>
+    <th>Th</th>
+    <th>Fr</th>
+    <th>Sa</th>
   </tr>
 
   {{#each weeks}}
     <tr>
       {{#each this}}
-      <td>
         {{#if this}}
-          {{this}}<br/>
-          <a href='#'>John Smith</a><br/>
-          <a href='#'>Sam Jones</a><br/>
-          <a href='#'>+1</a><br/>
+          <td>
+            {{this}}<br/>
+            <!-- <a href='#'>John Smith</a><br/>
+            <a href='#'>Sam Jones</a><br/>
+            <a href='#'>+1</a><br/> -->
+          </td>
+        {{else}}
+          <td class="greyed-out"></td>
         {{/if}}
-      </td>
       {{/each}}
     </tr>
   {{/each}}
-
-
 </table>

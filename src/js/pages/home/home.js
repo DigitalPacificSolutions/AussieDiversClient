@@ -1,7 +1,10 @@
-HompageTemplate = require('./home.handlebars');
+// home.js
+// Should contain all logic for home page
 
-function ShowHomePage() {
-  return HompageTemplate({user: 'Fish Foot Brother FORREST'});
+function InitializeHomePage(prevState) {
+  return {};
 }
 
-module.exports = ShowHomePage;
+module.exports = {
+  initialize: InitializeHomePage
+};

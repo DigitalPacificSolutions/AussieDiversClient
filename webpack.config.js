@@ -6,12 +6,13 @@ module.exports = {
   entry: "./app.js",
   output: {
     path: path.resolve("dist/"),
-    // publicPath: "assets/",
+    publicPath: "/",
     filename: "js/bundle.js"
   },
-  // devServer: {
-  //   contentBase: "public"
-  // },
+  devServer: {
+    //contentBase: "public"
+    historyApiFallback: true
+  },
   module: {
     loaders: [
       {

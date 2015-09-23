@@ -31,9 +31,6 @@ $sidebar-width: 250px;
 
 .page-content-wrapper {
     margin-left: $sidebar-width;
-    min-height:8000px;
-    // overflow-x:hidden;
-    // display: inline-block;
     padding: .2em;
     transition: all 0.5s ease;
 }
@@ -101,16 +98,21 @@ $sidebar-width: 250px;
 .calendar th {
   color: rgba(0,0,220,.8);
   text-align: center;
-  width: 14.3%;
+  // width: 14.3%;
+  width: 5em;
   padding: .5em 0;
 }
 
 .calendar td {
   // color: rgba(0,0,220,.8);
-  height: 5em;
+  height: 4em;
   border: 1px solid #555;
   vertical-align: top;
   padding: .5em;
+}
+
+.calendar .greyed-out {
+  background-color: #DDD;
 }
 
 @media(max-width:768px) {
