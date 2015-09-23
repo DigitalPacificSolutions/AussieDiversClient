@@ -1,0 +1,29 @@
+<h1>Calendar</h1>
+<table class="calendar">
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+
+  {{#each weeks}}
+    <tr>
+      {{#each this}}
+      <td>
+        {{#if this}}
+          {{this}}<br/>
+          <a href='#'>John Smith</a><br/>
+          <a href='#'>Sam Jones</a><br/>
+          <a href='#'>+1</a><br/>
+        {{/if}}
+      </td>
+      {{/each}}
+    </tr>
+  {{/each}}
+
+
+</table>

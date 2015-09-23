@@ -1,0 +1,123 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Import bootstrap */
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.wrapper {
+  width:100%;
+  // overflow-x: hidden;
+}
+$sidebar-width: 250px;
+.sidebar-wrapper {
+    z-index: 100;
+    position: fixed;
+    width: $sidebar-width;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // background: rgba(0,0,220,0.1);
+    border-right: 1px solid #eee;
+    transition: all 0.5s ease;
+}
+
+.sidebar-wrapper.toggled {
+    width: 0;
+}
+
+.page-content-wrapper {
+    margin-left: $sidebar-width;
+    min-height:8000px;
+    // overflow-x:hidden;
+    // display: inline-block;
+    padding: .2em;
+    transition: all 0.5s ease;
+}
+
+.sidebar-wrapper.toggled + .page-content-wrapper {
+  margin-left:0;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 1.5em;
+    line-height: 3em;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0,0,220,0.5);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    font-size: 1.6em;
+    line-height: 2em;
+    text-indent: 0;
+    text-align:center;
+}
+
+.sidebar-nav > .sidebar-brand img {
+   width: $sidebar-width - 50;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #222;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #000;
+    background: none;
+}
+
+.calendar {
+  margin:auto;
+  // width: 25em;
+}
+
+.calendar th {
+  color: rgba(0,0,220,.8);
+  text-align: center;
+  width: 14.3%;
+  padding: .5em 0;
+}
+
+.calendar td {
+  // color: rgba(0,0,220,.8);
+  height: 5em;
+  border: 1px solid #555;
+  vertical-align: top;
+  padding: .5em;
+}
+
+@media(max-width:768px) {
+    .page-content-wrapper {
+      width: 100%;
+    }
+    .sidebar-nav {
+      font-size: 1.2em;
+    }
+}
