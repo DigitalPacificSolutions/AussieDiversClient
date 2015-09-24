@@ -12,7 +12,9 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
   width:100%;
   // overflow-x: hidden;
 }
+
 $sidebar-width: 250px;
+
 .sidebar-wrapper {
     z-index: 100;
     position: fixed;
@@ -62,7 +64,7 @@ $sidebar-width: 250px;
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(0,0,220,0.5);
+    background: #5B78BF;
 }
 
 .sidebar-nav li a:active,
@@ -96,7 +98,7 @@ $sidebar-width: 250px;
 }
 
 .calendar th {
-  color: rgba(0,0,220,.8);
+  color: #5B78BF;
   text-align: center;
   // width: 14.3%;
   width: 5em;
