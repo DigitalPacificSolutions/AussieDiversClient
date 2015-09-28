@@ -32,22 +32,32 @@ function LoadPath(path, rootElement, selectElementFn) {
     }, false);
 
     if(matches) {
-      return LoadPage(page, rootElement, selectElementFn); 
+      return LoadPage(page, rootElement, selectElementFn);
     }
   }
   console.debug('*** Route not found ***');
 }
 
 function LoadPage(page, rootElement, selectElementFn) {
-  page.state = page.initialize(page.state);
-  rootElement.innerHTML = page.template(page.state);
-  page.events.forEach(function(event){
-    selectElementFn(event.selector).addEventListener(event.on,
-      function(eventObj){
-        event.action(eventObj, page.state);
-        LoadPage(page, rootElement, selectElementFn);
-      });
-  });
+  var value = page.initialize(page.state);
+  
+  if(typeof(value) === 'function') {
+    value(SetPageContent);
+  } else {
+    SetPageContent(value);
+  }
+
+  function SetPageContent(state) {
+    page.state = state;
+    rootElement.innerHTML = page.template(page.state);
+    page.events.forEach(function(event){
+      selectElementFn(event.selector).addEventListener(event.on,
+        function(eventObj){
+          event.action(eventObj, page.state);
+          LoadPage(page, rootElement, selectElementFn);
+        });
+    });
+  }
 }
 
 module.exports = {

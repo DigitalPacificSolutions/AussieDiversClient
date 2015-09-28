@@ -1,5 +1,5 @@
 // app.js
-// requires all of the base page assets, along with all of the 
+// requires all of the base page assets, along with all of the
 // individual pages and registers them with the Page Loader.
 // Sets up the navigation
 
@@ -12,13 +12,16 @@ var $ = require('jquery');
 var PageLoader       = require('./pageLoader.js');
 
 // Require pages
-var HomePage         = require('./pages/home/home.js');
-var HomeTemplate     = require('./pages/home/home.handlebars');
-var CalendarPage     = require('./pages/calendar/calendar.js');
-var CalendarTemplate = require('./pages/calendar/calendar.handlebars');
+var HomePage          = require('./pages/home/home.js');
+var HomeTemplate      = require('./pages/home/home.handlebars');
+var CalendarPage      = require('./pages/calendar/calendar.js');
+var CalendarTemplate  = require('./pages/calendar/calendar.handlebars');
+var CustomersPage     = require('./pages/customers/customers.js');
+var CustomersTemplate = require('./pages/customers/customers.handlebars');
 
 PageLoader.RegisterPage([/^\/$/, /^\/home\/?$/], HomePage, HomeTemplate);
 PageLoader.RegisterPage(/^\/calendar\/?$/, CalendarPage, CalendarTemplate);
+PageLoader.RegisterPage(/^\/customers\/?$/, CustomersPage, CustomersTemplate);
 
 
 // TODO: Simplify this function

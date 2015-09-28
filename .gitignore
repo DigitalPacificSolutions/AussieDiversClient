@@ -1,9 +1,9 @@
 # Ignore node_modules
 node_modules
 
-# Ignore the dist folder
+# Ignore the Content folder
 # (since this can be generated with webpack -p)
-dist
+Content
 
 # Ignore swap files
 *.swp

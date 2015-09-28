@@ -5,12 +5,12 @@ module.exports = {
   context: path.resolve('src/js'),
   entry: "./app.js",
   output: {
-    path: path.resolve("dist/"),
-    publicPath: "/",
+    path: path.resolve("Content/"),
+    publicPath: "/Content/",
     filename: "js/bundle.js"
   },
   devServer: {
-    //contentBase: "public"
+    contentBase: "src",
     historyApiFallback: true
   },
   module: {
